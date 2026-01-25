@@ -156,4 +156,19 @@ musicToggleButton.addEventListener('click', () => {
         musicToggleButton.textContent = 'Désactiver le son';
     }
     isMusicPlaying = !isMusicPlaying;
+
 });
+
+//---------- Responsive Design Handling ----------//
+
+function handleResize() {
+    let width = window.innerWidth;
+    let gameContainer = document.getElementById('game-container');
+    if (width < 600) {
+        gameContainer.style.flexDirection = 'column';
+    } else {
+        gameContainer.style.flexDirection = 'row';
+    }
+}
+window.addEventListener('resize', handleResize);
+handleResize();
