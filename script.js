@@ -109,22 +109,6 @@ resetButton.addEventListener('click', () => {
     }
 });
 
-let konamiCode = [38,38,40,40,37,39,37,39,66,65];
-let konamiIndex = 0;
-window.addEventListener('keydown', (e) => {
-    if (e.keyCode === konamiCode[konamiIndex]) {
-        konamiIndex++;
-        if (konamiIndex === konamiCode.length) {
-            alert('Konami Code actvé! Vous gagnez 1000 points!');
-            score += 1000;
-            updateScoreDisplay();
-            konamiIndex = 0;
-        }
-    } else {
-        konamiIndex = 0;
-    }
-});
-
 let musicToggleButton = document.getElementById('play-sound-button');
 let backgroundMusic = new Audio('music.mp3');
 backgroundMusic.loop = true;
@@ -151,4 +135,9 @@ function adjustLayout() {
 }
 window.addEventListener('resize', adjustLayout);
 adjustLayout();
+
+
+
+
+
 
