@@ -159,16 +159,17 @@ musicToggleButton.addEventListener('click', () => {
 
 });
 
-//---------- Responsive Design Handling ----------//
+//---------- Responsive Design Handling FOR ALL ----------//
 
-function handleResize() {
+function adjustLayout() {
     let width = window.innerWidth;
-    let gameContainer = document.getElementById('game-container');
+    let body = document.body;
     if (width < 600) {
-        gameContainer.style.flexDirection = 'column';
+        body.style.fontSize = '14px';
     } else {
-        gameContainer.style.flexDirection = 'row';
+        body.style.fontSize = '16px';
     }
 }
-window.addEventListener('resize', handleResize);
-handleResize();
+window.addEventListener('resize', adjustLayout);
+adjustLayout();
+
