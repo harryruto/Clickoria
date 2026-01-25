@@ -118,3 +118,53 @@ footer {
     letter-spacing: 1px;
     text-shadow: 0 0 10px rgba(150, 150, 255, 0.3);
 }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    main {
+        padding: 30px 20px;
+    }
+
+    button {
+        width: 220px;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 400px) {
+    main {
+        padding: 20px 15px;
+    }
+
+    button {
+        width: 180px;
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/*Indisponible*/
+#others-games {
+    background: linear-gradient(135deg, #ff00d4, #00ffe1);
+    box-shadow:
+        0 0 15px rgba(255, 0, 200, 0.6),
+        0 0 30px rgba(0, 255, 220, 0.5);
+}
+#others-games:disabled {
+    background: gray;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+#others-games:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
