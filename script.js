@@ -19,6 +19,39 @@ let clickUpgradeButton = document.getElementById('click-upgrade-button');
 let autoUpgradeButton = document.getElementById('auto-upgrade-button');
 let pointsPerSecondDisplay = document.getElementById('points-per-second-display');
 
+// Compte à rebours
+function startCountdown() {
+    const targetDate = new Date('2026-01-27T18:30:00').getTime();
+    
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeRemaining = targetDate - now;
+        
+        if (timeRemaining < 0) {
+            document.getElementById('days').textContent = '0';
+            document.getElementById('hours').textContent = '0';
+            document.getElementById('minutes').textContent = '0';
+            document.getElementById('seconds').textContent = '0';
+            return;
+        }
+        
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = days;
+        document.getElementById('hours').textContent = hours;
+        document.getElementById('minutes').textContent = minutes;
+        document.getElementById('seconds').textContent = seconds;
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
+
+startCountdown();
+
 function updateScoreDisplay() {
     scoreDisplay.textContent = `Score: ${score}`;
     pointsPerSecondDisplay.textContent = `Points per Second: ${pointsPerSecond}`;
@@ -135,9 +168,6 @@ function adjustLayout() {
 }
 window.addEventListener('resize', adjustLayout);
 adjustLayout();
-
-
-
 
 
 
