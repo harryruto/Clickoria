@@ -19,7 +19,6 @@ let clickUpgradeButton = document.getElementById('click-upgrade-button');
 let autoUpgradeButton = document.getElementById('auto-upgrade-button');
 let pointsPerSecondDisplay = document.getElementById('points-per-second-display');
 
-// Compte à rebours
 function startCountdown() {
     const targetDate = new Date('2026-01-27T18:30:00').getTime();
     
@@ -168,6 +167,7 @@ function adjustLayout() {
 }
 window.addEventListener('resize', adjustLayout);
 adjustLayout();
+
 
 
 
