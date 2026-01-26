@@ -20,7 +20,7 @@ let autoUpgradeButton = document.getElementById('auto-upgrade-button');
 let pointsPerSecondDisplay = document.getElementById('points-per-second-display');
 
 function startCountdown() {
-    const targetDate = new Date('2026-01-27T18:30:00').getTime();
+    const targetDate = new Date('2026-01-26T18:30:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
@@ -167,6 +167,7 @@ function adjustLayout() {
 }
 window.addEventListener('resize', adjustLayout);
 adjustLayout();
+
 
 
 
