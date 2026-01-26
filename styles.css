@@ -44,6 +44,37 @@ header h1 {
     text-shadow: 0 0 20px rgba(100, 200, 255, 0.6);
 }
 
+/* COUNTDOWN */
+#announce {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#announce p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #4efcff;
+}
+
+#countdown {
+    font-size: 1.8rem;
+    font-weight: 600;
+    background: rgba(79, 252, 255, 0.15);
+    border: 2px solid #4efcff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    display: inline-block;
+    letter-spacing: 2px;
+    color: #4efcff;
+    text-shadow: 0 0 10px rgba(79, 252, 255, 0.8);
+}
+
+#countdown span {
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow: 0 0 15px rgba(79, 252, 255, 1);
+}
+
 /* MAIN CARD */
 main {
     background: rgba(10, 5, 30, 0.85);
@@ -166,5 +197,16 @@ footer {
 #others-games:disabled:hover {
     transform: none;
     box-shadow: none;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    font-size: 1rem;
 }
 
