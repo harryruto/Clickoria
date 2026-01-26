@@ -16,6 +16,7 @@ body {
     align-items: center;
     justify-content: space-between;
     overflow-x: hidden;
+    padding: 20px;
 }
 
 /* Nébuleuse animée */
@@ -31,11 +32,12 @@ body::before {
 
 /* HEADER */
 header {
-    margin-top: 40px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
     font-weight: 800;
     letter-spacing: 4px;
     background: linear-gradient(90deg, #7f7cff, #4efcff, #c77dff);
@@ -51,17 +53,17 @@ header h1 {
 }
 
 #announce p {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
     margin-bottom: 10px;
     color: #4efcff;
 }
 
 #countdown {
-    font-size: 1.8rem;
+    font-size: clamp(1rem, 4vw, 1.8rem);
     font-weight: 600;
     background: rgba(79, 252, 255, 0.15);
     border: 2px solid #4efcff;
-    padding: 15px 25px;
+    padding: 12px 20px;
     border-radius: 10px;
     display: inline-block;
     letter-spacing: 2px;
@@ -69,17 +71,13 @@ header h1 {
     text-shadow: 0 0 10px rgba(79, 252, 255, 0.8);
 }
 
-#countdown span {
-    color: #ffffff;
-    font-weight: 800;
-    text-shadow: 0 0 15px rgba(79, 252, 255, 1);
-}
-
 /* MAIN CARD */
 main {
+    width: 100%;
+    max-width: 500px;
     background: rgba(10, 5, 30, 0.85);
     border-radius: 20px;
-    padding: 40px 50px;
+    padding: clamp(20px, 5vw, 40px);
     box-shadow:
         0 0 30px rgba(100, 0, 255, 0.4),
         0 0 80px rgba(0, 200, 255, 0.2);
@@ -92,18 +90,21 @@ main {
 
 /* TEXT */
 p {
-    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
     letter-spacing: 1px;
     text-shadow: 0 0 10px rgba(0, 200, 255, 0.4);
 }
 
 /* BUTTONS */
 button {
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     padding: 14px;
     border-radius: 12px;
     border: none;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 3vw, 1rem);
     font-weight: 600;
     color: white;
     cursor: pointer;
@@ -128,9 +129,6 @@ button:active {
 /* SPECIAL BUTTON COLORS */
 #reset-button {
     background: linear-gradient(135deg, #ff004c, #ff7a00);
-    box-shadow:
-        0 0 15px rgba(255, 100, 0, 0.6),
-        0 0 30px rgba(255, 0, 100, 0.5);
 }
 
 #save-button {
@@ -143,79 +141,40 @@ button:active {
 
 /* FOOTER */
 footer {
-    margin-bottom: 20px;
-    font-size: 0.9rem;
+    margin-top: 20px;
+    font-size: clamp(0.7rem, 2.5vw, 0.9rem);
     opacity: 0.7;
     letter-spacing: 1px;
     text-shadow: 0 0 10px rgba(150, 150, 255, 0.3);
+    text-align: center;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    main {
-        padding: 30px 20px;
-    }
-
-    button {
-        width: 220px;
-        padding: 12px;
-        font-size: 0.9rem;
-    }
-
-    header h1 {
-        font-size: 2.2rem;
-    }
-}
-    p {
-      width : 120px
-    }
-
-    @media (max-width: 400px) {
-    main {
-        padding: 20px 15px;
-    }
-
-    button {
-        width: 180px;
-        padding: 10px;
-        font-size: 0.85rem;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        width : 80px
-    }
-}
-
-/*Indisponible*/
+/* Indisponible */
 #others-games {
     background: linear-gradient(135deg, #ff00d4, #00ffe1);
-    box-shadow:
-        0 0 15px rgba(255, 0, 200, 0.6),
-        0 0 30px rgba(0, 255, 220, 0.5);
 }
+
 #others-games:disabled {
     background: gray;
     box-shadow: none;
     cursor: not-allowed;
 }
+
 #others-games:disabled:hover {
     transform: none;
     box-shadow: none;
 }
 
-input[type="text"], input[type="password"], input[type="email"] {
+/* INPUTS */
+input[type="text"], 
+input[type="password"], 
+input[type="email"] {
     width: 100%;
-    padding: 10px;
+    max-width: 280px;
+    padding: 12px;
     margin: 8px 0;
-    box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 8px;
     background-color: #f8f8f8;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 3vw, 1rem);
 }
-
-
