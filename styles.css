@@ -178,3 +178,95 @@ input[type="email"] {
     background-color: #f8f8f8;
     font-size: clamp(0.9rem, 3vw, 1rem);
 }
+
+/* CONTAINER JEUX */
+.games-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 40px auto;
+}
+
+/* CARTE JEU / BOT */
+.game-card {
+    background: rgba(15, 10, 40, 0.85);
+    border-radius: 20px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    box-shadow:
+        0 0 25px rgba(100, 0, 255, 0.5),
+        0 0 60px rgba(0, 200, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow:
+        0 0 40px rgba(0, 255, 255, 0.9),
+        0 0 90px rgba(180, 0, 255, 0.8);
+}
+
+/* IMAGE */
+.game-card img {
+    width: 140px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.6));
+}
+
+/* TITRE */
+.game-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #7f7cff, #4efcff, #c77dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* BOUTON DISCORD */
+.bot-link {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #5865F2, #00e5ff);
+    box-shadow:
+        0 0 15px rgba(88, 101, 242, 0.6),
+        0 0 40px rgba(0, 229, 255, 0.4);
+    transition: all 0.25s ease;
+}
+
+.bot-link:hover {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 30px rgba(88, 101, 242, 1),
+        0 0 70px rgba(0, 229, 255, 0.8);
+}
+
+.game-card {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+.bot-link {
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 15px rgba(88, 101, 242, 0.6); }
+    50% { box-shadow: 0 0 35px rgba(88, 101, 242, 1); }
+    100% { box-shadow: 0 0 15px rgba(88, 101, 242, 0.6); }
+}
+
