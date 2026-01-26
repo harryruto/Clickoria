@@ -53,7 +53,7 @@ startCountdown();
 
 function updateScoreDisplay() {
     scoreDisplay.textContent = `Score: ${score}`;
-    pointsPerSecondDisplay.textContent = `Points per Second: ${pointsPerSecond}`;
+    pointsPerSecondDisplay.textContent = `Points par seconde : ${pointsPerSecond}`;
 }
 updateScoreDisplay();
 
@@ -167,6 +167,7 @@ function adjustLayout() {
 }
 window.addEventListener('resize', adjustLayout);
 adjustLayout();
+
 
 
 
