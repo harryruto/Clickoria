@@ -270,3 +270,6 @@ input[type="email"] {
     100% { box-shadow: 0 0 15px rgba(88, 101, 242, 0.6); }
 }
 
+#start-golden-time {
+    background: linear-gradient(90deg, #FF0000, #fa3535);
+}
