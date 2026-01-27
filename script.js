@@ -11,6 +11,11 @@ let upgrades = {
         cost: 50,
         increment: 1,
         quantity: 0
+    },
+    goldentime : {
+        cost : 100,
+        increment : 2,
+        quantity : 0
     }
 };
 let scoreDisplay = document.getElementById('score-display');
@@ -53,7 +58,7 @@ startCountdown();
 
 function updateScoreDisplay() {
     scoreDisplay.textContent = `Score: ${score}`;
-    pointsPerSecondDisplay.textContent = `Points par seconde : ${pointsPerSecond}`;
+    pointsPerSecondDisplay.textContent = `Points per Second: ${pointsPerSecond}`;
 }
 updateScoreDisplay();
 
@@ -168,8 +173,13 @@ function adjustLayout() {
 window.addEventListener('resize', adjustLayout);
 adjustLayout();
 
+function goldentTime() {
+    !alert("Cette fonctionnalité est encore en développement")
+}
 
-
+function comingSoon() {
+    !alert("Coming soon...")
+}
 
 
 
